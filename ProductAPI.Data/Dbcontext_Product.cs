@@ -10,7 +10,13 @@ namespace ProductAPI.Data
 {
     public class Dbcontext_Product : DbContext
     {
-        public Dbcontext_Product (DbContextOptions<Dbcontext_Product> options) : base(options) { }
+        public Dbcontext_Product(DbContextOptions<Dbcontext_Product> options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
         public DbSet<Product> Products { get; set; }
     }
 }

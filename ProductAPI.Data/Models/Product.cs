@@ -14,6 +14,5 @@ namespace ProductAPI.Data.Models
         public string ProductName { get; set; }
         public string Description { get; set; }
 
-
     }
 }

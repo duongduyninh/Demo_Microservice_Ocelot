@@ -13,11 +13,14 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+
 builder.Services.AddDbContext<Dbcontext_Product>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("Microservice_Ocelot.Products");
+    var connectionString = builder.Configuration.GetConnectionString("Dbcontext_Product");
     options.UseSqlServer(connectionString);
 });
+
+
 
 // Add services to the container.
 
